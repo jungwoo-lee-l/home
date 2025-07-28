@@ -137,11 +137,12 @@ header { /* 헤더 전체 */
   padding: 32px 48px 28px 32px;
   animation: fadein 0.18s;
 }
+/*
 .menu-container:hover .mega-menu,
 .menu-container:hover .mega-buffer,
 .menu-container:focus-within .mega-menu {
   display: block;
-}
+}*/
 .mega-menu-inner { /* 메가메뉴 flex */
   display: flex;
   flex-direction: row;

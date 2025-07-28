@@ -1,4 +1,31 @@
-﻿const slidesWrap = document.querySelector('.main-slider .slides-wrap');
+﻿// 메뉴 컨테이너와 메가메뉴를 선택
+  const menuContainer = document.querySelector('.menu-container');
+  const megaMenu = document.querySelector('.mega-menu');
+  let menuTimer;
+
+  menuContainer.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    megaMenu.style.display = 'block';
+  });
+
+  menuContainer.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => {
+      megaMenu.style.display = 'none';
+    }, 180); // 180ms 후 닫힘 (자연스럽게)
+  });
+
+  megaMenu.addEventListener('mouseenter', () => {
+    clearTimeout(menuTimer);
+    megaMenu.style.display = 'block';
+  });
+
+  megaMenu.addEventListener('mouseleave', () => {
+    menuTimer = setTimeout(() => {
+      megaMenu.style.display = 'none';
+    }, 180);
+  });
+
+const slidesWrap = document.querySelector('.main-slider .slides-wrap');
 const slideElems = document.querySelectorAll('.main-slider .slide');
 const dots = document.querySelectorAll('.main-slider .dot');
 const prevBtn = document.querySelector('.main-slider .slide-prev');
